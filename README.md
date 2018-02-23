@@ -1,4 +1,4 @@
-# hackecopter-boilerplate
+# HackCopter '18
 
 (This is for now an internal Algolia event but feel free to read).
 
@@ -60,11 +60,11 @@ This has been tested on macOS High Sierra.
 Then on your computer, if you already have Node.js, do this:
 
 ```sh
-git git@github.com:vvo/hackcopter-boilerplate.git
-cd hackcopter-boilerplate
-npm install
-# Edit fly.js and stop.js files to replace "yourteamname" with "teamx" x being
-# your team number
+git git@github.com:algolia/hackcopter.git
+cd hackcopter
+npm install # or yarn
+# Edit fly.js and stop.js files to replace "TeamX" with Team1 or Team2..
+# Your team number is written on the box too
 node fly.js
 ```
 
