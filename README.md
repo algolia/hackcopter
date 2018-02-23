@@ -14,6 +14,7 @@ The drone can be controlled with code, your phone (using the "free flight mini" 
 - [Getting started](#getting-started)
 - [Very important information](#very-important-information)
 - [API](#api)
+- [Technical advices](#technical-advices)
 - [If Node.js is not working](#if-nodejs-is-not-working)
 - [Upgrading the `pdrone` module](#upgrading-the-pdrone-module)
 - [FAQ](#faq)
@@ -22,7 +23,7 @@ The drone can be controlled with code, your phone (using the "free flight mini" 
 
 ## Rules
 
-This contest is all about creativity. You are being given one drone, we provide you accessories, we expect from you to be CREATIVE.
+This contest is all about team work and creativity. You are being given one drone, one area, we provide you accessories, we expect you to be CREATIVE.
 
 Play with the drone and think about a cool 1, 2 or 3 minutes flight where you will demonstrate what you managed to achieve with the drone.
 
@@ -31,12 +32,18 @@ Here are some ideas:
 - Combining drone flight with music
 - Using all the accessories like baloons, pins, rings...
 - Making a very precise flight with targets on paper
+- Running through a pile of red cups
+- The lego drop challenge
+- The baloon pop challenge (don't kill anyone)
 - Be C-R-E-A-T-I-V-E, make us dream and you'll win
 
 At 2pm every team will have to do a demo of their flight and then every team will have to vote for winning teams.
 
 The three winning teams will win one drone for each participant. The rest of the drones will be
 given as a lottery to the whole team.
+
+A bit of advice, when your coders are struggling with a task, control
+the drone with the controller or your phone and think about your demo.
 
 ## Getting started
 
@@ -67,7 +74,7 @@ If not, see "If Node.js is not working" section. Or ask an organizer/colleague.
 
 ## Very important information
 
-Always open two tabs, one for launching fly.js, 
+Always open two terminal tabs, one for launching fly.js, 
 another one for launching stop.js.
 
 In case your drone is stuck because you forgot to land it or if there's any other issue
@@ -97,9 +104,9 @@ drone.on('connected', function() {
   drone.closeClaw();
   drone.fire();
 
+  // events
   drone.on('connected', function() {});
-
-  // events about flight status, accessories, ... you'll have to dig that
+  // flight status, accessories, ... you'll have to dig that
   drone.on('sensor', function(event) {
     // event.name =>
     //   flatTrimDone, status, alert, claw, gun, position, speed, altitude, quaternion
@@ -108,7 +115,11 @@ drone.on('connected', function() {
 });
 ```
 
-You can also use lower level commands:
+## Technical advices
+
+Have a look at pdrone repository at [algolia/pdrone](https://github.com/algolia/pdrone).
+
+You can also use lower level commands (this is not required at all, only for transparency):
 - `drone.runCommand('minidrone', 'Piloting', 'TakeOff')`
 - `drone.connection.on('sensor:minidrone-PilotingState-FlyingStateChanged', e => console.log(e))`
 
@@ -123,6 +134,8 @@ If you are really adventurous you can read about [Parrot's protocol](http://deve
 
 `runCommand` responsibility is to traverse the XML (arsdk-xml) turned into JavaScript object,
 find the right ids and messages formats and craft buffers.
+
+While you're reading this very technical piece, wanna go the extra mile? What about controlling the drone using your browser? What about implementing even more features like taking pictures? Go wild here!
 
 ## If Node.js is not working
 
@@ -166,7 +179,10 @@ yarn add pdrone@latest
 
 ## FAQ
 
-- I have to leave early what do I do?
+- "I have to leave early what do I do?"
 It's ok, pack your stuff bring it to the ballroom and use the best of your time to help your teammates and have your share of fun.
+
+- "Nothing is working THIS IS SHIT!"
+It's ok, come talk to us ask for help
 
 Any question, ask organizers and we will add the answers for everyone here iteratively.
