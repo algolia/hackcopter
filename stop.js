@@ -1,5 +1,10 @@
 const pdrone = require('pdrone');
-const drone = pdrone({id: 'Teamx'});
+
+// const identifier = 'vvo';
+const drone = pdrone({
+  id: 'Team12',
+});
+
 drone.on('connected', function() {
   drone.emergency();
 });
