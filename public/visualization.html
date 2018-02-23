@@ -3,11 +3,25 @@
     <title>
         Yeah baby
     </title>
+
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
 
-<button id="take-off">Take-off</button>
+
+<div id="loading">
+    Connecting, please wait!
+</div>
+
+<div id="controls" class="hidden">
+    <button id="take-off">Take-off</button>
+    <button id="land">Land</button>
+</div>
 
 <script src="clubber.js"></script>
 <script>
@@ -25,7 +39,8 @@
     ws.onmessage = function (ev) {
         switch(ev.data) {
             case 'READY':
-                alert('yeah!');
+                document.querySelector('#loading').className = 'hidden';
+                document.querySelector('#controls').className = '';
                 break;
         }
     };
@@ -33,6 +48,10 @@
 
     document.querySelector('#take-off').addEventListener('click', () => {
         ws.send('TAKEOFF');
+    });
+
+    document.querySelector('#land').addEventListener('click', () => {
+        ws.send('LAND');
     });
 </script>
 </body>

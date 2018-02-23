@@ -8,6 +8,8 @@ let drone;
 
 wss.on('connection', function (ws) {
     ws.on('message', function (message) {
+        console.log(message);
+
         switch(message) {
             case 'CONNECTED':
 
@@ -19,6 +21,10 @@ wss.on('connection', function (ws) {
 
             case 'TAKEOFF':
                 drone.takeOff();
+                break;
+
+            case 'LAND':
+                drone.land();
                 break;
         }
     });
