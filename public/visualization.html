@@ -21,10 +21,19 @@
 <div id="controls" class="hidden">
     <button id="take-off">Take-off</button>
     <button id="land">Land</button>
+
+    <br>
+
+    <button id="start">Start!</button>
+
+    <audio controls="" crossorigin="Anonymous" src="//api.soundcloud.com/tracks/61221770/stream?client_id=56c4f3443da0d6ce6dcb60ba341c4e8d"></audio>
 </div>
 
 <script src="clubber.js"></script>
 <script>
+    // https://github.com/jiin/dancing-torus
+    // https://github.com/wizgrav/clubber
+
     var ws = new WebSocket('ws://localhost:40510');
 
     // event emmited when connected
@@ -53,6 +62,76 @@
     document.querySelector('#land').addEventListener('click', () => {
         ws.send('LAND');
     });
+
+    document.querySelector('#start').addEventListener('click', () => {
+        start();
+    });
+
+
+    let clubber = null;
+    var baseBands;
+
+    function start() {
+        clubber = new Clubber({
+            size: 2048, // Samples for the fourier transform. The produced linear frequency bins will be 1/2 that.
+            mute: false // whether the audio source should be connected to web audio context destination.
+        });
+
+        var audio = document.querySelector('audio');
+        audio.crossOrigin = "Anonymous";
+        audio.src = "https://api.soundcloud.com/tracks/61221770/stream?client_id=56c4f3443da0d6ce6dcb60ba341c4e8d";
+
+
+        baseBands = {
+            low: clubber.band({from:5, to:32, smooth: [1,1,1,1]}),
+            mid_low: clubber.band({from:32, to:48, smooth: [1,1,1,1]}),
+            mid_high: clubber.band({from:48, to:64, smooth: [1,1,1,1]}),
+            high: clubber.band({from:64, to:160, smooth: [1,1,1,1]})
+        };
+
+        clubber.listen(audio);
+
+        audio.play();
+
+        update();
+    }
+
+    function update() {
+        clubber.update();
+
+        let bands = [
+            baseBands.low(),
+            baseBands.mid_low(),
+            baseBands.mid_high(),
+            baseBands.high()
+        ];
+
+        let bandsSection = [
+            bands[0][0], bands[0][1], bands[0][2],
+            bands[1][0], bands[1][1], bands[1][2],
+            bands[2][0], bands[2][1], bands[2][2]
+        ];
+
+        console.log(bandsSection);
+
+        var x = bandsSection[0] * 100;
+        var y = bandsSection[0] * 100;
+        var z = bandsSection[0] * 100;
+
+        /*var time = Date.now() * 0.001;
+
+        let el = this.clock.getElapsedTime() * .05;
+        let d  = this.clock.getDelta();*/
+
+
+        // this.ring.rotation.y = this.ring.rotation.z = 0.01 * time;
+        // this.ring.material.uniforms.amplitude.value = 3.0 * Math.sin(this.ring.rotation.y * 0.12);
+
+
+        console.log(x, y, z);
+
+        requestAnimationFrame(update);
+    }
 </script>
 </body>
 </html>

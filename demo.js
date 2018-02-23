@@ -32,6 +32,9 @@ wss.on('connection', function (ws) {
 
 function initializeDrone() {
     return new Promise((resolve, reject) => {
+        resolve();
+        return;
+
         drone = pdrone({ id: 'vvo', debug: false });
 
         process.on('unhandledRejection', err => {
