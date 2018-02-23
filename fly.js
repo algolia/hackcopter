@@ -63,7 +63,7 @@ process.on('unhandledRejection', err => {
 });
 
 process.on('SIGINT', function() {
-  console.log("Caught interrupt signal, landing");
+  console.log("Caught interrupt signal, landing if needed");
 
   drone.safeLandingAndExit();
 });
