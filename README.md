@@ -6,6 +6,20 @@ Welcome to HackCopter '18.
 
 The drone can be controlled with code, your phone (using the "free flight mini" app) or the controller. The contest is about controlling it with code.
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [Rules](#rules)
+- [Getting started](#getting-started)
+- [Very important information](#very-important-information)
+- [API](#api)
+- [If Node.js is not working](#if-nodejs-is-not-working)
+- [Upgrading the `pdrone` module](#upgrading-the-pdrone-module)
+- [FAQ](#faq)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Rules
 
 This contest is all about creativity. You are being given one drone, we provide you accessories, we expect from you to be CREATIVE.
