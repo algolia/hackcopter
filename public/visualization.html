@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>
+        Yeah baby
+    </title>
+</head>
+
+<body>
+
+<button id="take-off">Take-off</button>
+
+<script src="clubber.js"></script>
+<script>
+    var ws = new WebSocket('ws://localhost:40510');
+
+    // event emmited when connected
+    ws.onopen = function () {
+        console.log('websocket is connected ...');
+
+        // sending a send event to websocket server
+        ws.send('CONNECTED');
+    };
+
+    // event emmited when receiving message
+    ws.onmessage = function (ev) {
+        switch(ev.data) {
+            case 'READY':
+                alert('yeah!');
+                break;
+        }
+    };
+
+
+    document.querySelector('#take-off').addEventListener('click', () => {
+        ws.send('TAKEOFF');
+    });
+</script>
+</body>
+</html>

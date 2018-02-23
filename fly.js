@@ -1,5 +1,5 @@
 const pdrone = require('pdrone');
-const drone = pdrone({ id: 'TeamX', debug: false });
+const drone = pdrone({ id: 'vvo', debug: false });
 
 drone.on('sensor', function({name}) {
   // console.log(name, value);
@@ -20,6 +20,9 @@ drone.on('connected', async function() {
   drone.fly({ gaz: 100 });
   await drone.wait(1000);
   drone.fly({ gaz: 0 });
+  await drone.wait(1000);
+
+  drone.flip({direction: 'front'});
   await drone.wait(1000);
 
   // If you've plugged the claw in, open it

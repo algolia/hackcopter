@@ -4,6 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "pdrone": "1.1.3"
+    "clubber": "^1.7.1",
+    "express": "^4.16.2",
+    "pdrone": "^1.1.5",
+    "ws": "^4.1.0"
   }
 }
