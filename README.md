@@ -168,6 +168,19 @@ nvm install
 yarn
 ```
 
+## If `warning Error running install script for optional dependency:`
+
+You need python2 in your env *not* python3. For me it make it work:
+```sh
+$ pyenv shell system
+$ rm -rf node_modules
+$ npm install #or yarn
+yarn install v1.3.2
+[1/4] 🔍  Resolving packages...
+success Already up-to-date.
+✨  Done in 0.14s.
+```
+
 ## Upgrading the `pdrone` module
 
 We might ask you to upgrade the module while at the event, for this:
