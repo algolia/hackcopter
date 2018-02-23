@@ -60,7 +60,7 @@ This has been tested on macOS High Sierra.
 Then on your computer, if you already have Node.js, do this:
 
 ```sh
-git git@github.com:algolia/hackcopter.git
+git clone git@github.com:algolia/hackcopter.git
 cd hackcopter
 npm install # or yarn
 # Edit fly.js and stop.js files to replace "TeamX" with Team1 or Team2..
