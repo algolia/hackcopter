@@ -5,6 +5,7 @@ const {
   RTM_EVENTS,
   WebClient,
 } = require('@slack/client');
+const say = require("say");
 const _ = require('lodash');
 const TOKEN = 'xoxb-321039328631-UF6qAKK2FOcMS7cwO7LLOKWm';
 let CHANNEL_ID = null;
@@ -45,6 +46,7 @@ const rtm = new RtmClient(TOKEN, {
 });
 
 function init() {
+    speak("Let's get this party started");
   // Connecting
   const web = new WebClient(TOKEN);
   const getChannels = web.channels.list();
@@ -65,6 +67,10 @@ function init() {
   });
 
   rtm.start();
+}
+
+function speak(msg) {
+    say.speak(msg, 'Daniel', 1.2);
 }
 
 function onStart(callback) {
@@ -115,7 +121,9 @@ function executeCommand() {
     console.info('Execute command', mostVotedCommand);
     const emoji = availableCommands[mostVotedCommand].emoji;
     sendMessage(`:helicopter: ${emoji} ${mostVotedCommand}`);
+    speak(`${mostVotedCommand}`, 'Daniel', 1.2);
 
+    
     // TODO: Call the right method here based on the most voted one
     // actions[mostVotedCommand]()
   }
