@@ -5,5 +5,9 @@
   "license": "MIT",
   "dependencies": {
     "pdrone": "1.1.3"
+  },
+  "devDependencies": {
+    "@slack/client": "^3.16.0",
+    "lodash": "^4.17.5"
   }
 }
