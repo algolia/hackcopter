@@ -1,0 +1,273 @@
+[
+  {
+    "name": "fly",
+    "args": [
+      {
+        "pitch": 30,
+        "gaz": 50
+      }
+    ],
+    "at": 1519419041604,
+    "waitTime": 4732
+  },
+  {
+    "name": "flip",
+    "args": [
+      {
+        "direction": "back"
+      }
+    ],
+    "at": 1519419046336,
+    "waitTime": 986
+  },
+  {
+    "name": "fly",
+    "args": [
+      {
+        "roll": 0,
+        "pitch": 0,
+        "yaw": 0,
+        "gaz": 0
+      }
+    ],
+    "at": 1519419047322,
+    "waitTime": 324
+  },
+  {
+    "name": "flip",
+    "args": [
+      {
+        "direction": "back"
+      }
+    ],
+    "at": 1519419047646,
+    "waitTime": 1273
+  },
+  {
+    "name": "flip",
+    "args": [
+      {
+        "direction": "back"
+      }
+    ],
+    "at": 1519419048919,
+    "waitTime": 1218
+  },
+  {
+    "name": "flip",
+    "args": [
+      {
+        "direction": "back"
+      }
+    ],
+    "at": 1519419050137,
+    "waitTime": 802
+  },
+  {
+    "name": "flip",
+    "args": [
+      {
+        "direction": "back"
+      }
+    ],
+    "at": 1519419050939,
+    "waitTime": 2161
+  },
+  {
+    "name": "flip",
+    "args": [
+      {
+        "direction": "back"
+      }
+    ],
+    "at": 1519419053100,
+    "waitTime": 1872
+  },
+  {
+    "name": "fly",
+    "args": [
+      {
+        "yaw": 50
+      }
+    ],
+    "at": 1519419054972,
+    "waitTime": 2745
+  },
+  {
+    "name": "fly",
+    "args": [
+      {
+        "roll": 0,
+        "pitch": 0,
+        "yaw": 0,
+        "gaz": 0
+      }
+    ],
+    "at": 1519419057717,
+    "waitTime": 598
+  },
+  {
+    "name": "fly",
+    "args": [
+      {
+        "gaz": -10
+      }
+    ],
+    "at": 1519419058315,
+    "waitTime": 979
+  },
+  {
+    "name": "fly",
+    "args": [
+      {
+        "roll": 0,
+        "pitch": 0,
+        "yaw": 0,
+        "gaz": 0
+      }
+    ],
+    "at": 1519419059294,
+    "waitTime": 294
+  },
+  {
+    "name": "fly",
+    "args": [
+      {
+        "roll": 80,
+        "yaw": 80,
+        "gaz": 100
+      }
+    ],
+    "at": 1519419059588,
+    "waitTime": 3940
+  },
+  {
+    "name": "fly",
+    "args": [
+      {
+        "roll": 0,
+        "pitch": 0,
+        "yaw": 0,
+        "gaz": 0
+      }
+    ],
+    "at": 1519419063528,
+    "waitTime": 98
+  },
+  {
+    "name": "fly",
+    "args": [
+      {
+        "pitch": 30,
+        "gaz": 50
+      }
+    ],
+    "at": 1519419063626,
+    "waitTime": 2632
+  },
+  {
+    "name": "fly",
+    "args": [
+      {
+        "yaw": 50
+      }
+    ],
+    "at": 1519419066258,
+    "waitTime": 5118
+  },
+  {
+    "name": "fly",
+    "args": [
+      {
+        "pitch": 30,
+        "gaz": 50
+      }
+    ],
+    "at": 1519419071376,
+    "waitTime": 1757
+  },
+  {
+    "name": "fly",
+    "args": [
+      {
+        "yaw": -50
+      }
+    ],
+    "at": 1519419073133,
+    "waitTime": 676
+  },
+  {
+    "name": "fly",
+    "args": [
+      {
+        "pitch": 30,
+        "gaz": 50
+      }
+    ],
+    "at": 1519419073809,
+    "waitTime": 333
+  },
+  {
+    "name": "fly",
+    "args": [
+      {
+        "yaw": 50
+      }
+    ],
+    "at": 1519419074142,
+    "waitTime": 640
+  },
+  {
+    "name": "fly",
+    "args": [
+      {
+        "pitch": 30,
+        "gaz": 50
+      }
+    ],
+    "at": 1519419074782,
+    "waitTime": 2159
+  },
+  {
+    "name": "fly",
+    "args": [
+      {
+        "roll": 0,
+        "pitch": 0,
+        "yaw": 0,
+        "gaz": 0
+      }
+    ],
+    "at": 1519419076941,
+    "waitTime": 1276
+  },
+  {
+    "name": "fly",
+    "args": [
+      {
+        "pitch": 30,
+        "gaz": 50
+      }
+    ],
+    "at": 1519419078217,
+    "waitTime": 540
+  },
+  {
+    "name": "fly",
+    "args": [
+      {
+        "roll": 0,
+        "pitch": 0,
+        "yaw": 0,
+        "gaz": 0
+      }
+    ],
+    "at": 1519419078757,
+    "waitTime": 2560
+  },
+  {
+    "name": "safeLandingAndExit",
+    "args": [],
+    "at": 1519419081317
+  }
+]
