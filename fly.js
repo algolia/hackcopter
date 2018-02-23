@@ -45,7 +45,7 @@ drone.on('connected', async function() {
   await drone.wait(500);
 
   // If you've plugged the claw in, open it
-  drone.closeClaw();
+  drone.fire();
   await drone.wait(500);
 
   // Safely land
