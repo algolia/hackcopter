@@ -28,9 +28,9 @@ are-we-there-yet@~1.1.2:
     delegates "^1.0.0"
     readable-stream "^2.0.6"
 
-"arsdk-xml@https://github.com/Parrot-Developers/arsdk-xml/archive/f241e26d3f0a95b014e6948a23500ddd855b62c2.tar.gz":
-  version "0.0.0"
-  resolved "https://github.com/Parrot-Developers/arsdk-xml/archive/f241e26d3f0a95b014e6948a23500ddd855b62c2.tar.gz#81927d4d2ad415fb9977e1d04351e0d3d76a5b72"
+"arsdk-xml@https://github.com/algolia/arsdk-xml/archive/ac7193af6b93313d38c645354b185ab4fe85083a.tar.gz":
+  version "1.0.0"
+  resolved "https://github.com/algolia/arsdk-xml/archive/ac7193af6b93313d38c645354b185ab4fe85083a.tar.gz#a7957adb2ff3fb6a975615e048b4e7bdc3b44f25"
 
 asn1@~0.2.3:
   version "0.2.3"
@@ -502,23 +502,23 @@ path-parse@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.5.tgz#3c1adf871ea9cd6c9431b6ea2bd74a0ff055c4c1"
 
-pdrone-low-level@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/pdrone-low-level/-/pdrone-low-level-1.1.0.tgz#61f26e8d6d10bab71cfc8c44a4cc6093e7cf5053"
+pdrone-low-level@1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/pdrone-low-level/-/pdrone-low-level-1.1.2.tgz#2d12633d8ea5819a69f0275e408143e4776baa8d"
   dependencies:
-    arsdk-xml "https://github.com/Parrot-Developers/arsdk-xml/archive/f241e26d3f0a95b014e6948a23500ddd855b62c2.tar.gz"
+    arsdk-xml "https://github.com/algolia/arsdk-xml/archive/ac7193af6b93313d38c645354b185ab4fe85083a.tar.gz"
     case "1.5.4"
     noble "https://github.com/noble/noble/archive/3cfb558c9f31aa9e1e5690f036fd2efcaf208d8e.tar.gz"
     resolve "1.5.0"
     winston "2.4.0"
     xml2js "0.4.19"
 
-pdrone@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/pdrone/-/pdrone-1.1.0.tgz#deabcc2e77545f0a9a7e69dbdc9b31ab97b1dadc"
+pdrone@1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/pdrone/-/pdrone-1.1.2.tgz#3d7ba6002d194ade9ea9869a4be4b01ab0ee30ba"
   dependencies:
     camelcase "4.1.0"
-    pdrone-low-level "1.1.0"
+    pdrone-low-level "1.1.2"
     winston "2.4.0"
 
 performance-now@^0.2.0:
