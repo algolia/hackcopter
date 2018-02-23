@@ -1,5 +1,5 @@
 const pdrone = require('pdrone');
-const drone = pdrone({ id: 'vvo', debug: false });
+const drone = pdrone({ id: 'TeamX', debug: false });
 
 drone.on('sensor', function({name}) {
   // console.log(name, value);
